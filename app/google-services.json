@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "298079008273",
+    "firebase_url": "https://tutorganiser-1603777646352.firebaseio.com",
+    "project_id": "tutorganiser-1603777646352",
+    "storage_bucket": "tutorganiser-1603777646352.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298079008273:android:656206252ea250d023a3b0",
+        "android_client_info": {
+          "package_name": "com.example.dbtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298079008273-0e67pmubtq1g18rio4dikodf9d5v0l8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dbtest",
+            "certificate_hash": "dab84f8e06c7e01ab48698ed39c93668eb35e832"
+          }
+        },
+        {
+          "client_id": "298079008273-35j41q1808a7vr2dktsok1eia3b2okas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHKloOLBMD2RlyF3VLcSyHG1Nrwk4ygSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298079008273-35j41q1808a7vr2dktsok1eia3b2okas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

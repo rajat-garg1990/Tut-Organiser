@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragment1">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/addStuCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/textColor"
+        app:cardBackgroundColor="@color/backgroundColor"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/updateStud"
+        app:layout_constraintEnd_toStartOf="@id/removeStuCard">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp">
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:src="@drawable/ic_addperson" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="17sp"
+                android:text="Add new student here"
+                android:padding="5dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="ADD"
+                android:id="@+id/addButton"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/removeStuCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/textColor"
+        app:cardBackgroundColor="@color/backgroundColor"
+        android:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addStuCard"
+        app:layout_constraintBottom_toTopOf="@id/viewStud">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp">
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:src="@drawable/ic_removeperson" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="17sp"
+                android:text="Remove student here"
+                android:padding="5dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="REMOVE"
+                android:id="@+id/removeButton"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/updateStud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/textColor"
+        app:cardBackgroundColor="@color/backgroundColor"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addStuCard"
+        app:layout_constraintEnd_toStartOf="@id/viewStud">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp">
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:src="@drawable/ic_updateperson" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="17sp"
+                android:text="Update student information here"
+                android:padding="5dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Update"
+                android:id="@+id/updateButton"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/viewStud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/textColor"
+        app:cardBackgroundColor="@color/backgroundColor"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/removeStuCard"
+        app:layout_constraintStart_toEndOf="@id/updateStud">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp">
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:src="@drawable/ic_allperson" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="17sp"
+                android:text="View all students here"
+                android:padding="5dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="view"
+                android:id="@+id/viewButton"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

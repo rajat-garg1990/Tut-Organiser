@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/weight"
+        android:enabled="true"
+        android:icon="@drawable/ic_weight"
+        android:title="Weight"
+        android:iconTint="@color/backgroundColor"/>
+    <item
+        android:id="@+id/length"
+        android:icon="@drawable/ic_length"
+        android:title="Length"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/currency"
+        android:icon="@drawable/ic_currency"
+        android:title="Currency"
+        android:enabled="true"/>
+</menu>
