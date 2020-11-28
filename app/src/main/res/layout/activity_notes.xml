@@ -4,27 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewStudentActivity">
+    tools:context=".NotesActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topBar"
+        android:id="@+id/notesBar"
         style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_back"
-        app:title="View Students" />
-
+        app:title="Note Pad"
+        app:titleTextColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/viewStudRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:id="@+id/noteRecycler"
         android:layout_margin="10dp"
         android:scrollbars="vertical"
+        tools:listitem="@layout/list_notes"
+        app:layout_constraintTop_toBottomOf="@id/notesBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:id="@+id/addNoteButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBar" />
+        android:layout_margin="10dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

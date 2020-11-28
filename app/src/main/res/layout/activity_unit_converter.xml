@@ -5,26 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UnitConverterActivity">
-<com.google.android.material.appbar.MaterialToolbar
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:title="Unit Converter"
-    app:titleTextColor="#fff"
-    android:id="@+id/unitBar"
-    app:navigationIcon="@drawable/ic_back"
-    style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/unitBar"
+        style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Unit Converter"
+        app:titleTextColor="#fff" />
+
     <FrameLayout
+        android:id="@+id/fragConverter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/unitBar"
-        android:id="@+id/fragConverter"/>
+        android:layout_below="@id/unitBar" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:id="@+id/bottomNav"
-        app:menu="@menu/bottom_nav"
+        android:background="#16244C"
         app:itemTextColor="#fff"
-        android:background="#16244C"/>
+        app:menu="@menu/bottom_nav" />
 
 </RelativeLayout>

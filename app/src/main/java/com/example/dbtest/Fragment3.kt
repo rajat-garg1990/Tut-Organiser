@@ -23,25 +23,8 @@ class Fragment3:Fragment() {
         unitConverter.setOnClickListener {
             startActivity(Intent(this@Fragment3.context, UnitConverterActivity::class.java))
         }
-    }
-        /*addChildFragment(WeightFragment(),R.id.fragConverter)
-        bottomNav.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.weight->{
-                    addChildFragment(WeightFragment(),R.id.fragConverter)
-                }
-                R.id.length->{
-                    addChildFragment(LengthFragment(),R.id.fragConverter)
-                }
-                R.id.currency->{
-                    addChildFragment(CurrencyFragment(),R.id.fragConverter)
-                }
-            }
-            true
+        notes.setOnClickListener {
+            startActivity(Intent(this@Fragment3.context,NotesActivity::class.java))
         }
     }
-    private fun Fragment.addChildFragment(fragment: Fragment, frameId: Int) {
-        val transaction = childFragmentManager.beginTransaction()
-        transaction.replace(frameId, fragment).commit()
-    }*/
 }
