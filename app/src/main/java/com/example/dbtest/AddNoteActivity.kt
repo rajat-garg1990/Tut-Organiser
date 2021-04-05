@@ -30,7 +30,7 @@ class AddNoteActivity : AppCompatActivity() {
                         .setPositiveButton("OK") { _, _ -> }.show()
                 else {
                     if (newNoteTitle.text.isNullOrEmpty())
-                        newNoteTitle.setText(newNoteBody.text?.take(5))
+                        newNoteTitle.setText(newNoteBody.text?.take(10))
                     var note = Note()
                     note.title = newNoteTitle.text.toString()
                     note.body = newNoteBody.text.toString()

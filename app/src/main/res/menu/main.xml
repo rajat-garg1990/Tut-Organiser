@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Settings"
         android:id="@+id/settings"/>
-    <item android:title="Data Backup/Restore"
-        android:id="@+id/backupRestore"/>
+    <item android:title="Feedback to Dev"
+        android:id="@+id/feedback"/>
 </menu>

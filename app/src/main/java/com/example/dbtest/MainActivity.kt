@@ -97,8 +97,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings -> startActivity(Intent(this, Settings::class.java))
-            R.id.backupRestore -> {
-            }
+            R.id.feedback -> startActivity(Intent(this,Feedback::class.java))
         }
         return super.onOptionsItemSelected(item)
     }

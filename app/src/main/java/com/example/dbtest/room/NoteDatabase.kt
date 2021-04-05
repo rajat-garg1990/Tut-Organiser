@@ -3,17 +3,22 @@ package com.example.dbtest.room
 import android.content.Context
 import androidx.room.*
 
-@Database(entities = [Note::class],version = 1)
-abstract class NoteDatabase : RoomDatabase(){
+@Database(entities = [Note::class], version = 2)
+abstract class NoteDatabase : RoomDatabase() {
     abstract fun noteDao(): NoteDao
-    companion object{
+
+    companion object {
         @Volatile
-        var instance: NoteDatabase?=null
-        operator fun invoke(context: Context)= instance ?: synchronized(Any()){
-            instance ?: buildDatabase(context).also{ instance=it}
+        var instance: NoteDatabase? = null
+        operator fun invoke(context: Context) = instance ?: synchronized(Any()) {
+            instance ?: buildDatabase(context).also { instance = it }
         }
 
-        private fun buildDatabase(context: Context)=Room.databaseBuilder(context,
-            NoteDatabase::class.java,"NoteDB").allowMainThreadQueries().build()
+        private fun buildDatabase(context: Context) = Room.databaseBuilder(
+            context,
+            NoteDatabase::class.java, "NoteDB"
+        ).allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
     }
 }

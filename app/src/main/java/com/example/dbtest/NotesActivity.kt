@@ -15,12 +15,17 @@ class NotesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_notes)
 
         notesBar.setNavigationOnClickListener { finish() }
-        val db=NoteDatabase(this)
-        val notes=db.noteDao().getNote()
+        val db = NoteDatabase(this)
+        val notes = db.noteDao().getNote()
         var noteRecycler = findViewById<RecyclerView>(R.id.noteRecycler)
-        noteRecycler.apply {
-            layoutManager = GridLayoutManager(this@NotesActivity, 2)
-            adapter=NoteAdapter(notes,context)
+        val adapter=NoteAdapter(notes, this)
+        noteRecycler.adapter = adapter
+        noteRecycler.layoutManager = GridLayoutManager(this, 2)
+        swipe.setOnRefreshListener {
+            adapter.notifyDataSetChanged()
+            swipe.isRefreshing=false
+            recreate()
+
         }
         addNoteButton.setOnClickListener {
             startActivity(Intent(this, AddNoteActivity::class.java))

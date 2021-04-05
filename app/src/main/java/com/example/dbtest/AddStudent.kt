@@ -41,7 +41,7 @@ class AddStudent : AppCompatActivity() {
         }
         var db = StudentDatabase(this)
         addStud.setOnClickListener {
-            if (textName.text.isEmpty() || textDob.text.isEmpty() || gender.isEmpty() || textRoll.text.isEmpty()) {
+            if (textName.text.isEmpty() || textDob.text.isEmpty() || gender.isEmpty() || textRoll.text.isEmpty() || textEnroll.text.isEmpty()) {
                 MaterialAlertDialogBuilder(this).setTitle("Fields with ' * ' cannot be empty")
                     .setPositiveButton("OK") { _, _ -> }.show()
             } else {
