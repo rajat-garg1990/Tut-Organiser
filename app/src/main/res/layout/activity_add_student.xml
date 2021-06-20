@@ -131,7 +131,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Residence(Area)"
+        android:hint="Class &amp; Section"
         app:boxStrokeWidth="3dp"
         android:layout_margin="10dp"
         android:layout_below="@id/text3"
@@ -142,13 +142,45 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/textClass"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Residence(Area)"
+        app:boxStrokeWidth="3dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/text4"
+        app:hintTextColor="@color/textColor"
+        android:id="@+id/text5"
+        app:boxStrokeColor="@color/colorAccent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/textRes"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        app:boxStrokeWidth="3dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/text5"
+        app:hintTextColor="@color/textColor"
+        android:id="@+id/text6"
+        app:boxStrokeColor="@color/colorAccent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCity"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Student"
         android:id="@+id/addStud"
-        android:layout_below="@id/text4"
+        android:layout_below="@id/text6"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

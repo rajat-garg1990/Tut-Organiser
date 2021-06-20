@@ -56,6 +56,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Class &amp; Section"
+            android:textColor="@color/textColor"
+            android:layout_margin="5dp"
+            android:id="@+id/cardSection"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Date of Birth: (DOB)"
             android:textColor="@color/textColor"
             android:layout_margin="5dp"
@@ -67,6 +74,13 @@
             android:textColor="@color/textColor"
             android:layout_margin="5dp"
             android:id="@+id/cardArea"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textColor="@color/textColor"
+            android:layout_margin="5dp"
+            android:id="@+id/cardCity"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

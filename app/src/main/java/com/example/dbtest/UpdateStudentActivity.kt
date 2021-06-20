@@ -32,8 +32,12 @@ class UpdateStudentActivity : AppCompatActivity() {
         var updateDob = findViewById<TextView>(R.id.updateDob)
         var updateGender = findViewById<RadioGroup>(R.id.updateGender)
         var updateRes = findViewById<TextView>(R.id.updateRes)
+        var updateCity = findViewById<TextView>(R.id.updateCity)
+        var updateSection = findViewById<TextView>(R.id.updateSection)
         textEnroll.text = enroll
         if (student != null) {
+            updateCity.text = student.city
+            updateSection.text = student.section
             searchRoll.text = student.roll
             updateName.text = student.name
             updateDob.text = student.dob
@@ -65,6 +69,8 @@ class UpdateStudentActivity : AppCompatActivity() {
                 student.dob = updateDob.text.toString()
                 student.area = updateRes.text.toString()
                 student.gender = gender
+                student.city=updateCity.text.toString()
+                student.section=updateSection.text.toString()
                 /*db.studentDao().deleteStudent(student.name)
                 db.studentDao().insertStudent(student)*/
                 db.studentDao().updateStudent(student)

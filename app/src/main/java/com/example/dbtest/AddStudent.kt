@@ -27,6 +27,8 @@ class AddStudent : AppCompatActivity() {
         var textDob = findViewById<TextView>(R.id.textDob)
         var rgGender = findViewById<RadioGroup>(R.id.rgGender)
         var textRes = findViewById<TextView>(R.id.textRes)
+        var textClass = findViewById<TextView>(R.id.textClass)
+        var textCity = findViewById<TextView>(R.id.textCity)
         var textEnroll = findViewById<TextView>(R.id.textEnroll)
         var addStud = findViewById<Button>(R.id.addStud)
         var gender: String = ""
@@ -51,7 +53,9 @@ class AddStudent : AppCompatActivity() {
                 student.name = textName.text.toString()
                 student.dob = textDob.text.toString()
                 student.gender = gender
+                student.section = textClass.text.toString()
                 student.area = textRes.text.toString()
+                student.city = textCity.text.toString()
                 db.studentDao().insertStudent(student)
                 Snackbar.make(it, "Added Successfully !!", Snackbar.LENGTH_INDEFINITE)
                     .setAction("View") {

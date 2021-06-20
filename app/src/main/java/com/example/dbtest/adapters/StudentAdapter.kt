@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dbtest.MapsActivity
 import com.example.dbtest.R
 import com.example.dbtest.UpdateStudentActivity
 import com.example.dbtest.room.Student
@@ -28,9 +29,11 @@ class StudentAdapter(var students: List<Student>, var context: Context) :
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.cardEnroll.text=students[position].enroll
+        holder.itemView.cardEnroll.text = students[position].enroll
         holder.itemView.cardName.text = students[position].name
         holder.itemView.cardRoll.text = students[position].roll
+        holder.itemView.cardCity.text = students[position].city
+        holder.itemView.cardSection.text = students[position].section
         holder.itemView.cardGender.text = students[position].gender
         holder.itemView.cardDob.text = "Birth: " + students[position].dob
         holder.itemView.cardArea.text = students[position].area
@@ -40,12 +43,17 @@ class StudentAdapter(var students: List<Student>, var context: Context) :
                     db.studentDao().deleteStudent(holder.itemView.cardName.text.toString())
                     Toast.makeText(context, "Deleted student", Toast.LENGTH_LONG).show()
                 }
-                .setNegativeButton("Cancel"){_,_-> }.show()
+                .setNegativeButton("Cancel") { _, _ -> }.show()
         }
         holder.itemView.update_stud.setOnClickListener {
-            var intent=Intent(context,UpdateStudentActivity::class.java)
-            intent.putExtra("enroll",students[position].enroll)
+            var intent = Intent(context, UpdateStudentActivity::class.java)
+            intent.putExtra("enroll", students[position].enroll)
             context.startActivity(intent)
+        }
+        holder.itemView.cardStud.setOnClickListener {
+            val mapIntent=Intent(context, MapsActivity::class.java)
+            mapIntent.putExtra("Location",holder.itemView.cardCity.text)
+            context.startActivity(mapIntent)
         }
     }
 
